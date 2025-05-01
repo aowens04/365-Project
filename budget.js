@@ -1,17 +1,20 @@
 window.onload = pageload;
 
 pageload(){
-    document.getElementById("weekly").onClick = weeklyView
-    document.getElementById("monthly").onClick = monthlyView
-    document.getElementById("yearly").onClick = yearlyView
+    document.getElementById("button").onClick = update;
 }
 
-weeklyView(){
+update(){
+    if(document.getElementById("weekly").selected){
+        weeklyTable = document.getElementById("weeklyTable");
+        newItem = document.createElement("tr");
+        newItem 
 
-}
-monthlyView(){
-  
-}
-yearlyView(){
-    
+    }else if(document.getElementById("monthly").selected){
+        monthlyTable = document.getElementById("monthlyTable");
+
+    }else if(document.getElementById("yearly").selected){
+        yearlyTable = document.getElementById("yearlyTable");
+
+    }
 }
