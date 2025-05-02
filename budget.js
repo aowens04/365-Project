@@ -24,7 +24,7 @@ function update(){
     cell2.innerHTML = date;
     cell3.innerHTML = "delete";
 
-    totalSpending += amount;
+    totalSpending += Number(amount);
     weeklyBudget -= amount;
     total.innerHTML = totalSpending;
     
