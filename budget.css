@@ -13,10 +13,10 @@ h1{
     font-weight: bold;
 }
 
-a.visited , a{
+a:visited , a{
     color: rgb(251, 102, 192);
 }
 
-a.hover{
+a:hover{
     color: rgb(226, 188, 249);
 }
