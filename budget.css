@@ -1,9 +1,17 @@
 body{
     text-align: center;
     background-color: rgb(255, 222, 245);
+    font-size: larger;
 }
 h1{
     color: white;
+    font-size: xxx-large;
+    text-shadow:
+        -1px 0 rgb(251, 102, 192),
+        1px 0 rgb(251, 102, 192),
+        0 -1px rgb(251, 102, 192),
+        0 1px rgb(251, 102, 192);
+        
 }
 
 .container , .listContainer , .budgetContainer{
@@ -15,8 +23,34 @@ h1{
 
 a:visited , a{
     color: rgb(251, 102, 192);
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 a:hover{
     color: rgb(205, 149, 240);
+    text-decoration: none;
+}
+
+#nav{
+    display: flex;
+    padding: 10px;
+    background-color: rgb(252, 250, 250);
+    justify-content: space-evenly;
+}
+
+img{
+    height: 10%;
+}
+
+
+hr{
+    height: 2px;
+    color:rgb(251, 102, 192);
+    background-color: rgb(251, 102, 192);
+}
+
+.purr{
+    color: rgb(201, 127, 247);
 }
