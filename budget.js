@@ -3,10 +3,17 @@ totalSpending = Number(0);
 
 function pageload(){
     document.getElementById("add").onclick = update;
+    document.getElementById("set").onclick = create;
 }
 
+function create(){
+    weeklyBudget = document.getElementById("input").value;
+    remaining = document.getElementById("remaining");
+    remaining.innerHTML = weeklyBudget;
+}
 function update(){
     weeklyBudget = document.getElementById("input").value;
+    remaining = document.getElementById("remaining").value;
     category = document.getElementById("selCategory").value;
     amount = document.getElementById("amount").value;
     date = document.getElementById("date").value;
@@ -25,7 +32,9 @@ function update(){
     cell3.innerHTML = "delete";
 
     totalSpending += Number(amount);
-    weeklyBudget -= amount;
+    total.style.textDecoration = "no underline";
     total.innerHTML = totalSpending;
+    remaining -= amount;
+    remaining.innerHTML = weeklyBudget;
     
 }
