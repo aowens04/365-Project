@@ -13,8 +13,12 @@
         <p>
             Welcome to the budget tracker for weekly expenses
         </p>
-        
+        <div class="budgetContainer">
+            <label for="input">Weekly Budget:<input type="number" id="input"></label>
+        </div><br>
+
         <div class="container">
+            <h2>Expenses List</h2>
             <label for="selCategory">Category:</label>
             <select id="selCategory">
                 <option value="Food & Beverage"> Food and Beverage</option>
@@ -22,13 +26,12 @@
                 <option value="Transportation">Transportation</option>
                 <option value="Vacation">Vacation</option>
             </select>
-            <label for="input"> <input type="number" id="input">Amount:</label>
-            <label for="date"> <input type="date" id="date">Date:</label>
+            <label for="input">Amount: <input type="number" id="input"></label>
+            <label for="date"> Date:<input type="date" id="date"></label>
             <button id="add">Add</button>
         </div>
 
         <div class="listContainer">
-            <h2>Expenses List</h2>
             <table>
                 <thead>
                     <tr>
