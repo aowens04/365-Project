@@ -21,6 +21,29 @@ h1{
     font-weight: bold;
 }
 
+table{
+    width: 60%;
+    border: 1px solid rgb(251, 102, 192);
+    border-collapse: collapse;
+}
+th, td {
+    text-align: left;
+    padding: 15px;
+    font-weight: bold;
+    border: 1px solid rgb(251, 102, 192);
+    border-collapse: collapse;
+  }
+
+  th, tfoot{
+    color:rgb(251, 102, 192);
+    background-color:rgb(233, 212, 248);
+    text-decoration: underline;
+  }
+
+#total{
+    text-decoration: none;
+}
+
 a:visited , a{
     color: rgb(251, 102, 192);
     text-decoration: none;
@@ -49,6 +72,7 @@ hr{
     height: 2px;
     color:rgb(251, 102, 192);
     background-color: rgb(251, 102, 192);
+    width: 90%;
 }
 
 .purr{
