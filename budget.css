@@ -6,8 +6,9 @@ h1{
     color: white;
 }
 
-.container{
+.budgetContainer{
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
+    font-weight: bold;
 }
