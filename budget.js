@@ -36,4 +36,7 @@ function update(){
     total.innerHTML = totalSpending;
     remaining.innerHTML = weeklyBudget - totalSpending;
     
+    if((weeklyBudget - totalSpending) < 0){
+        alert("AAAAAAAHHHHHHH");
+    }
 }
