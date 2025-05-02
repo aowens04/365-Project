@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="budget.css">
+        <title>Budget Tracker</title>
+    </head>
+    <body>
+        <div id="nav">
+            <a href="budget.html">Home</a>
+            <a href="weekly.html">Weekly</a>
+            <a href="monthly.html">Monthly</a>
+            <a href="yearly.html">Yearly</a>
+        </div>
+        <p>
+            Welcome to the budget tracker for weekly expenses
+        </p>
+        
+        <div class="container">
+            <label for="selCategory">Category:</label>
+            <select id="selCategory">
+                <option value="Food & Beverage"> Food and Beverage</option>
+                <option value="Rent">Rent</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Vacation">Vacation</option>
+            </select>
+            <label for="input"> <input type="number" id="input">Amount:</label>
+            <label for="date"> <input type="date" id="date">Date:</label>
+            <button id="add">Add</button>
+        </div>
+
+        <div class="listContainer">
+            <h2>Expenses List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="table">
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total:</td>
+                        <td id="total"></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+        <script src="budget.js"></script>
+    </body>
+</html>
