@@ -12,3 +12,11 @@ h1{
     padding: 10px;
     font-weight: bold;
 }
+
+a:visited , a{
+    color: rgb(251, 102, 192);
+}
+
+a:hover{
+    color: rgb(226, 188, 249);
+}
