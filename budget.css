@@ -6,7 +6,7 @@ h1{
     color: white;
 }
 
-.budgetContainer{
+.container , .listContainer , .budgetContainer{
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
