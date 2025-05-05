@@ -13,14 +13,12 @@ function pageload(){
 }
 
 function createWeekly(){
-    alert();
     var weeklyBudget = $("input").value;
     var remaining = $("remaining");
     remaining.innerHTML = weeklyBudget;
 }
 
 function updateWeekly(){
-    alert();
     var weeklyBudget = $("input").value;
     var remaining = $("remaining");
     var category = $("selCategory").value;
@@ -50,14 +48,12 @@ function updateWeekly(){
 }
 
 function createMonthly(){
-    alert();
     var monthlyBudget = $("inputMonthly").value;
     var remainingMonthly = $("remainingMonthly");
     remainingMonthly.innerHTML = monthlyBudget;
 }
 
 function updateMonthly(){
-    alert();
     var monthlyBudget = $("inputMonthly").value;
     var remainingMonthly = $("remainingMonthly");
     var category = $("selCategory").value;
