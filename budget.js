@@ -36,7 +36,7 @@ function updateWeekly(){
     cell0.innerHTML = category;
     cell1.innerHTML = amount;
     cell2.innerHTML = day;
-    cell3.innerHTML = "delete";
+    cell3.innerHTML = "<button>delete</button>";
 
     totalSpendingWeekly += Number(amount);
     total.innerHTML = totalSpendingWeekly;
@@ -58,7 +58,7 @@ function updateMonthly(){
     remainingMonthly = $("remainingMonthly");
     category = $("selCategory").value;
     amount = $("amount").value;
-    month = $("date").value;
+    month = $("month").value;
     total = $("total");
 
     tableBody = document.getElementById("table");
@@ -71,7 +71,7 @@ function updateMonthly(){
     cell0.innerHTML = category;
     cell1.innerHTML = amount;
     cell2.innerHTML = date;
-    cell3.innerHTML = "delete";
+    cell3.innerHTML = document.createElement("button");
 
     totalSpendingMonthly += Number(amount);
     total.innerHTML = totalSpendingMonthly;
@@ -106,7 +106,7 @@ function updateYearly(){
     cell0.innerHTML = category;
     cell1.innerHTML = amount;
     cell2.innerHTML = date;
-    cell3.innerHTML = "delete";
+    cell3.innerHTML = document.createElement("button");
 
     totalSpendingYearly += Number(amount);
     total.innerHTML = totalSpendingYearly;
@@ -116,4 +116,4 @@ function updateYearly(){
         alert("Warning: You've exceeded your budget.");
     }
 }
-
+*/
