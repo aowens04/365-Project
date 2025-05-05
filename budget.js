@@ -10,6 +10,7 @@ function pageload(){
     $("setMonthly").onclick = updateMonthly;
     $("addYearly").onclick = createYearly;
     $("setYearly").onclick = updateYearly;
+    $("delete").onclick = delButton; 
 }
 
 function createWeekly(){
@@ -38,7 +39,7 @@ function updateWeekly(){
     cell0.innerHTML = category;
     cell1.innerHTML = amount;
     cell2.innerHTML = day;
-    cell3.innerHTML = "<button>delete</button>";
+    cell3.innerHTML = <button id="delButton">delete</button>;
 
     totalSpendingWeekly += Number(amount);
     total.innerHTML = totalSpendingWeekly;
