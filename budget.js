@@ -2,7 +2,7 @@ window.onload = pageload;
 totalSpending = Number(0);
 
 function pageload(){
-    document.getElementById("add").onclick = update;
+    document.getElementById("add").onclick = updateWeekly;
     document.getElementById("set").onclick = create;
 }
 
@@ -12,12 +12,12 @@ function create(){
     remaining.innerHTML = weeklyBudget;
 }
 
-function update(){
+function updateWeekly(){
     weeklyBudget = document.getElementById("input").value;
     remaining = document.getElementById("remaining");
     category = document.getElementById("selCategory").value;
     amount = document.getElementById("amount").value;
-    date = document.getElementById("date").value;
+    day = document.getElementById("day").value;
     total = document.getElementById("total");
 
     tableBody = document.getElementById("table");
@@ -29,7 +29,7 @@ function update(){
 
     cell0.innerHTML = category;
     cell1.innerHTML = amount;
-    cell2.innerHTML = date;
+    cell2.innerHTML = day;
     cell3.innerHTML = "delete";
 
     totalSpending += Number(amount);
@@ -37,6 +37,6 @@ function update(){
     remaining.innerHTML = weeklyBudget - totalSpending;
     
     if((weeklyBudget - totalSpending) < 0){
-        alert("AAAAAAAHHHHHHH");
+        alert("Warning: You've exceeded your budget.");
     }
 }
