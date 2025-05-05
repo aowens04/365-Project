@@ -2,23 +2,24 @@ window.onload = pageload;
 totalSpending = Number(0);
 
 function pageload(){
-    document.getElementById("add").onclick = updateWeekly;
-    document.getElementById("set").onclick = create;
+    $("add").onclick = updateWeekly;
+    $("set").onclick = createWeekly;
+
 }
 
-function create(){
-    weeklyBudget = document.getElementById("input").value;
-    remaining = document.getElementById("remaining");
+function createWeekly(){
+    weeklyBudget = $("input").value;
+    remaining = $("remaining");
     remaining.innerHTML = weeklyBudget;
 }
 
 function updateWeekly(){
-    weeklyBudget = document.getElementById("input").value;
-    remaining = document.getElementById("remaining");
-    category = document.getElementById("selCategory").value;
-    amount = document.getElementById("amount").value;
-    day = document.getElementById("day").value;
-    total = document.getElementById("total");
+    weeklyBudget = $("input").value;
+    remaining = $("remaining");
+    category = $("selCategory").value;
+    amount = $("amount").value;
+    day = $("day").value;
+    total = $("total");
 
     tableBody = document.getElementById("table");
     row = table.insertRow();
