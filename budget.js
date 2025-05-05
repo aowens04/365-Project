@@ -48,14 +48,14 @@ function updateWeekly(){
 }
 
 function createMonthly(){
-    monthlyBudget = $("input").value;
+    monthlyBudget = $("inputMonthly").value;
     remainingMonthly = $("remainingMonthly");
     remainingMonthly.innerHTML = monthlyBudget;
 }
-/*
+
 function updateMonthly(){
-    monthlyBudget = $("input").value;
-    remainingMonthly = $("remaining");
+    monthlyBudget = $("inputMonthly").value;
+    remainingMonthly = $("remainingMonthly");
     category = $("selCategory").value;
     amount = $("amount").value;
     month = $("date").value;
@@ -81,4 +81,39 @@ function updateMonthly(){
         alert("Warning: You've exceeded your budget.");
     }
 }
-*/
+
+function createYearly(){
+    yearlyBudget = $("inputYearly").value;
+    remainingYearly = $("remainingYearly");
+    remainingYearly.innerHTML = yearlyBudget;
+}
+
+function updateYearly(){
+    yearlyBudget = $("inputYearly").value;
+    remainingYearly = $("remainingYearly");
+    category = $("selCategory").value;
+    amount = $("amount").value;
+    month = $("date").value;
+    total = $("total");
+
+    tableBody = document.getElementById("table");
+    row = table.insertRow();
+    cell0 = row.insertCell(0);
+    cell1 = row.insertCell(1);
+    cell2 = row.insertCell(2);
+    cell3 = row.insertCell(3);
+
+    cell0.innerHTML = category;
+    cell1.innerHTML = amount;
+    cell2.innerHTML = date;
+    cell3.innerHTML = "delete";
+
+    totalSpendingYearly += Number(amount);
+    total.innerHTML = totalSpendingYearly;
+    remainingYearly.innerHTML = YearlyBudget - totalSpendingYearly;
+    
+    if((YearlyBudget - totalSpendingYearly) < 0){
+        alert("Warning: You've exceeded your budget.");
+    }
+}
+
