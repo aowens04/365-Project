@@ -13,12 +13,14 @@ function pageload(){
 }
 
 function createWeekly(){
+    alert();
     weeklyBudget = $("input").value;
     remaining = $("remaining");
     remaining.innerHTML = weeklyBudget;
 }
 
 function updateWeekly(){
+    alert();
     weeklyBudget = $("input").value;
     remaining = $("remaining");
     category = $("selCategory").value;
@@ -48,12 +50,14 @@ function updateWeekly(){
 }
 
 function createMonthly(){
+    alert();
     monthlyBudget = $("inputMonthly").value;
     remainingMonthly = $("remainingMonthly");
     remainingMonthly.innerHTML = monthlyBudget;
 }
 
 function updateMonthly(){
+    alert();
     monthlyBudget = $("inputMonthly").value;
     remainingMonthly = $("remainingMonthly");
     category = $("selCategory").value;
@@ -116,4 +120,4 @@ function updateYearly(){
         alert("Warning: You've exceeded your budget.");
     }
 }
-*/
+
