@@ -8,12 +8,14 @@ function pageload(){
 }
 
 function createWeekly(){
+    alert();
     var weeklyBudget = $("input").value;
     var remainingWeekly = $("remainingWeekly");
     remainingWeekly.innerHTML = weeklyBudget;
 }
 
 function updateWeekly(){
+    alert();
     var weeklyBudget = $("input").value;
     var remainingWeekly = $("remainingWeekly");
     var category = $("selCategory").value;
