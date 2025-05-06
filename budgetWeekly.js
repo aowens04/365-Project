@@ -1,6 +1,5 @@
 window.onload = pageload;
 var totalSpendingWeekly = Number(0);
-var numRows = 0;
 
 function pageload(){
     $("setWeekly").onclick = createWeekly;
@@ -63,15 +62,15 @@ function deleteRow(){
             cell1 = row.childNodes[1];
             amount = cell1.childNodes[0].textContent;
             row.remove();
+
+            var weeklyBudget = $("input").value;
+            var remainingWeekly = $("remainingWeekly");
+            var total = $("total");
+
+            totalSpendingWeekly -= Number(amount);
+            total.innerHTML = totalSpendingWeekly;
+            remainingWeekly.innerHTML = weeklyBudget - totalSpendingWeekly;
         }
     }  
-
-    var weeklyBudget = $("input").value;
-    var remainingWeekly = $("remainingWeekly");
-    var total = $("total");
-
-    totalSpendingWeekly -= Number(amount);
-    total.innerHTML = totalSpendingWeekly;
-    remainingWeekly.innerHTML = weeklyBudget - totalSpendingWeekly;
 
 }

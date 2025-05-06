@@ -39,12 +39,6 @@ function updateMonthly(){
     totalSpendingMonthly += Number(amount);
     total.innerHTML = totalSpendingMonthly;
     remainingMonthly.innerHTML = monthlyBudget - totalSpendingMonthly;
-    totalSpendingWeekly += Number(amount);
-    total.innerHTML = totalSpendingWeekly;
-    remainingWeekly.innerHTML = weeklyBudget - totalSpendingWeekly;
-    totalSpendingMonthly += Number(amount);
-    total.innerHTML = totalSpendingMonthly;
-    remainingMonthly.innerHTML = monthlyBudget - totalSpendingMonthly;
     
     if((monthlyBudget - totalSpendingMonthly) < 0){
         alert("Warning: You've exceeded your budget.");
@@ -78,5 +72,5 @@ function deleteRow(){
             total.innerHTML = totalSpendingMonthly;
             remainingMonthly.innerHTML = monthlyBudget - totalSpendingMonthly;
         }
-    }  
+    } 
 }

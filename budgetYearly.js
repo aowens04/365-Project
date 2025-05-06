@@ -43,6 +43,13 @@ function updateYearly(){
     if((yearlyBudget - totalSpendingYearly) < 0){
         alert("Warning: You've exceeded your budget.");
     } 
+
+    var hiddenInputs = $("hiddenInputs");
+    hiddenInputs.insertAdjacentHTML("beforeend", `
+        <input type="hidden" name="category[]" value="${category}">
+        <input type="hidden" name="amount[]" value="${amount}">
+        <input type="hidden" name="year[]" value="${year}">
+    `);
 }
 
 function deleteRow(){
