@@ -31,15 +31,26 @@ function updateMonthly(){
     cell0.innerHTML = category;
     cell1.innerHTML = amount;
     cell2.innerHTML = month;
-    cell3.innerHTML = "<button>delete</button>";
+    var checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.name = 'delete';
+    checkbox.onclick = deleteRow;
+    cell3.appendChild(checkbox);
 
+<<<<<<< HEAD
 
     totalSpendingMonthly += Number(amount);
     total.innerHTML = totalSpendingMonthly;
     remainingMonthly.innerHTML = monthlyBudget - totalSpendingMonthly;
+=======
+    totalSpendingWeekly += Number(amount);
+    total.innerHTML = totalSpendingWeekly;
+    remainingWeekly.innerHTML = weeklyBudget - totalSpendingWeekly;
+>>>>>>> 0a36dd720754bd85becacd072e8ebdf66bafb8fc
     
-    if((monthlyBudget - totalSpendingMonthly) < 0){
+    if((weeklyBudget - totalSpendingWeekly) < 0){
         alert("Warning: You've exceeded your budget.");
+<<<<<<< HEAD
     }
 
     var hiddenInputs = document.getElementById("hiddenInputs");
@@ -49,4 +60,20 @@ function updateMonthly(){
         <input type="hidden" name="date[]" value="${month}">
     `);
 
+=======
+    } 
+}
+
+function deleteRow(){
+    //inputs = document.getElementsByTagName("input");
+    inputs = document.getElementsByName('delete');
+    for (i = 0; i < inputs.length; i++){
+        input = inputs[i];
+        if(input.checked){
+            var cell = input.parentNode;
+            var row = cell.parentNode;
+            row.remove();
+        }
+    }  
+>>>>>>> 0a36dd720754bd85becacd072e8ebdf66bafb8fc
 }
