@@ -50,7 +50,6 @@ function updateMonthly(){
         <input type="hidden" name="amount[]" value="${amount}">
         <input type="hidden" name="date[]" value="${month}">
     `);
-
     } 
 
 function deleteRow(){

@@ -13,6 +13,7 @@ function createYearly(){
 }
 
 function updateYearly(){
+    event.preventDefault();
     var yearlyBudget = $("inputYearly").value;
     var remainingYearly = $("remainingYearly");
     var category = $("selCategory").value;
@@ -73,4 +74,3 @@ function deleteRow(){
         }
     }  
 }
-
