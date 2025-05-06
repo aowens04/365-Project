@@ -4,7 +4,6 @@ var totalSpendingYearly = Number(0);
 function pageload(){
     $("setYearly").onclick = createYearly;
     $("addYearly").onclick = updateYearly;
-    //$("delete").onclick = delButton; 
 }
 
 function createYearly(){
@@ -37,24 +36,33 @@ function updateYearly(){
     checkbox.onclick = deleteRow;
     cell3.appendChild(checkbox);
 
-    totalSpendingWeekly += Number(amount);
-    total.innerHTML = totalSpendingWeekly;
-    remainingWeekly.innerHTML = weeklyBudget - totalSpendingWeekly;
+    totalSpendingYearly += Number(amount);
+    total.innerHTML = totalSpendingYearly;
+    remainingYearly.innerHTML = yearlyBudget - totalSpendingYearly;
     
-    if((weeklyBudget - totalSpendingWeekly) < 0){
+    if((yearlyBudget - totalSpendingYearly) < 0){
         alert("Warning: You've exceeded your budget.");
     } 
 }
 
 function deleteRow(){
-    //inputs = document.getElementsByTagName("input");
     inputs = document.getElementsByName('delete');
     for (i = 0; i < inputs.length; i++){
         input = inputs[i];
         if(input.checked){
             var cell = input.parentNode;
             var row = cell.parentNode;
+            cell1 = row.childNodes[1];
+            amount = cell1.childNodes[0].textContent;
             row.remove();
+
+            var yearlyBudget = $("inputYearly").value;
+            var remainingYearly = $("remainingYearly");
+            var total = $("totalYearly");
+
+            totalSpendingYearly -= Number(amount);
+            total.innerHTML = totalSpendingYearly;
+            remainingYearly.innerHTML = yearlyBudget - totalSpendingYearly;
         }
     }  
 }
