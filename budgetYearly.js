@@ -46,7 +46,6 @@ function updateYearly(){
 }
 
 function deleteRow(){
-    //inputs = document.getElementsByTagName("input");
     inputs = document.getElementsByName('delete');
     for (i = 0; i < inputs.length; i++){
         input = inputs[i];
