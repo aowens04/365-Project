@@ -28,14 +28,14 @@
         <form id="saveForm" action="monthlyBudget.php" method="post">
         <div class="container">
             <label for="selCategory">Category:</label>
-            <select id="selCategory" name="category[]">
+            <select id="selCategory" name="category">
                 <option value="Loan Payments"> Loan Payments</option>
                 <option value="Rent">Rent</option>
                 <option value="Transportation">Transportation</option>
                 <option value="Vacation">Vacation</option>
             </select>
-            <label for="input">Amount: <input type="number" id="amount" name="amount[]"></label>
-            <label for="date"> Date:<input type="month" id="month" name="date[]"></label>
+            <label for="input">Amount: <input type="number" id="amount" name="amount"></label>
+            <label for="date"> Date:<input type="month" id="month" name="date"></label>
             <button type="button" id="addMonthly">Add</button>
         </div>
         <hr>

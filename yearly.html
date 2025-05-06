@@ -28,15 +28,15 @@
         <form id ="saveForm" action="yearlyBudget.php" method="post">
         <div class="container">
             <label for="selCategory">Category:</label>
-            <select id="selCategory" name = "category[]">
+            <select id="selCategory" name = "category">
                 <option value="Vehicle Expenses"> Vehicle Expenses</option>
                 <option value="Taxes">Taxes</option>
                 <option value="Medical Expenses">Medical Expenses</option>
                 <option value="Vacation">Vacation</option>
                 <option value="Holidays">Holidays</option>
             </select>
-            <label for="input">Amount: <input type="number" id="amount" name="amount[]"></label>
-            <label for="date"> Date:<input  id="year" type="number" min="1900" max="2099" step="1" value="2025" name="year[]"></label>
+            <label for="input">Amount: <input type="number" id="amount" name="amount"></label>
+            <label for="date"> Date:<input  id="year" type="number" min="1900" max="2099" step="1" value="2025" name="year"></label>
             <button id="addYearly">Add</button>
         </div>
         <hr>

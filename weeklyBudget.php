@@ -15,7 +15,7 @@
         <p>Click the piggy bank to return to the home page!!!</p>
         <?php 
         $content = "";
-        for ($i = 0; $i < count($categories)-1; $i++) {
+        for ($i = 0; $i < count($categories); $i++) {
             $content .= $day[$i] . " -  Spent $" . $amounts[$i] . " on " . $categories[$i] . "\n";
         }
             file_put_contents("weeklyBudget.txt", $content, FILE_APPEND);

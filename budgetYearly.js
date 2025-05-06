@@ -12,13 +12,13 @@ function createYearly(){
     remainingYearly.innerHTML = yearlyBudget;
 }
 
-function updateYearly(){
+function updateYearly(event){
     event.preventDefault();
     var yearlyBudget = $("inputYearly").value;
     var remainingYearly = $("remainingYearly");
     var category = $("selCategory").value;
     var amount = $("amount").value;
-    var date = $("year").value;
+    var year = $("year").value;
     var total = $("totalYearly");
 
     var table = $("tableYear");
@@ -30,7 +30,7 @@ function updateYearly(){
 
     cell0.innerHTML = category;
     cell1.innerHTML = amount;
-    cell2.innerHTML = date;
+    cell2.innerHTML = year;
     var checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.name = 'delete';
