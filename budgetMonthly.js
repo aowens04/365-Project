@@ -36,19 +36,15 @@ function updateMonthly(){
     checkbox.onclick = deleteRow;
     cell3.appendChild(checkbox);
 
-<<<<<<< HEAD
-
     totalSpendingMonthly += Number(amount);
     total.innerHTML = totalSpendingMonthly;
     remainingMonthly.innerHTML = monthlyBudget - totalSpendingMonthly;
     totalSpendingWeekly += Number(amount);
     total.innerHTML = totalSpendingWeekly;
     remainingWeekly.innerHTML = weeklyBudget - totalSpendingWeekly;
-=======
     totalSpendingMonthly += Number(amount);
     total.innerHTML = totalSpendingMonthly;
     remainingMonthly.innerHTML = monthlyBudget - totalSpendingMonthly;
->>>>>>> af987c6285fed42693c516561199a1741f766855
     
     if((monthlyBudget - totalSpendingMonthly) < 0){
         alert("Warning: You've exceeded your budget.");
