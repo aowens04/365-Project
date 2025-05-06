@@ -16,7 +16,7 @@
         <?php 
         $content = "";
         for ($i = 0; $i < count($categories); $i++) {
-            $content .= " -  Spent $" . $amounts[$i] . " on " . $categories[$i] . "\n";
+            $content .= $dates[$i] . " -  Spent $" . $amounts[$i] . " on " . $categories[$i] . "\n";
         }
             file_put_contents("monthlyBudget.txt",  $content, FILE_APPEND);
         ?>
