@@ -70,7 +70,7 @@ function deleteRow(){
     var remainingWeekly = $("remainingWeekly");
     var total = $("total");
 
-    totalSpendingWeekly += Number(amount);
+    totalSpendingWeekly -= Number(amount);
     total.innerHTML = totalSpendingWeekly;
     remainingWeekly.innerHTML = weeklyBudget - totalSpendingWeekly;
 
