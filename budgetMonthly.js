@@ -37,20 +37,16 @@ function updateMonthly(){
     checkbox.onclick = deleteRow;
     cell3.appendChild(checkbox);
 
-<<<<<<< HEAD
 
     totalSpendingMonthly += Number(amount);
     total.innerHTML = totalSpendingMonthly;
     remainingMonthly.innerHTML = monthlyBudget - totalSpendingMonthly;
-=======
     totalSpendingWeekly += Number(amount);
     total.innerHTML = totalSpendingWeekly;
     remainingWeekly.innerHTML = weeklyBudget - totalSpendingWeekly;
->>>>>>> 0a36dd720754bd85becacd072e8ebdf66bafb8fc
     
     if((weeklyBudget - totalSpendingWeekly) < 0){
         alert("Warning: You've exceeded your budget.");
-<<<<<<< HEAD
     }
 
     var hiddenInputs = document.getElementById("hiddenInputs");
@@ -60,9 +56,7 @@ function updateMonthly(){
         <input type="hidden" name="date[]" value="${month}">
     `);
 
-=======
     } 
-}
 
 function deleteRow(){
     //inputs = document.getElementsByTagName("input");
@@ -75,5 +69,4 @@ function deleteRow(){
             row.remove();
         }
     }  
->>>>>>> 0a36dd720754bd85becacd072e8ebdf66bafb8fc
 }

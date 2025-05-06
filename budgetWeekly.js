@@ -46,7 +46,6 @@ function updateWeekly(){
     if((weeklyBudget - totalSpendingWeekly) < 0){
         alert("Warning: You've exceeded your budget.");
     } 
-<<<<<<< HEAD
 
     var hiddenInputs = $("hiddenInputs");
     hiddenInputs.insertAdjacentHTML("beforeend", `
@@ -56,8 +55,6 @@ function updateWeekly(){
     `);
             
     //$().onclick = delClick;
-=======
->>>>>>> 0a36dd720754bd85becacd072e8ebdf66bafb8fc
 }
 
 function deleteRow(){
