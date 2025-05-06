@@ -1,21 +1,20 @@
 window.onload = pageload;
 var totalSpendingWeekly = Number(0);
+var numRows = 0;
 
 function pageload(){
     $("setWeekly").onclick = createWeekly;
     $("addWeekly").onclick = updateWeekly;
-    //$("delete").onclick = delButton; 
+    $('delete').onclick = delButton; 
 }
 
 function createWeekly(){
-    alert();
     var weeklyBudget = $("input").value;
     var remainingWeekly = $("remainingWeekly");
     remainingWeekly.innerHTML = weeklyBudget;
 }
 
 function updateWeekly(){
-    alert();
     var weeklyBudget = $("input").value;
     var remainingWeekly = $("remainingWeekly");
     var category = $("selCategory").value;
@@ -33,7 +32,7 @@ function updateWeekly(){
     cell0.innerHTML = category;
     cell1.innerHTML = amount;
     cell2.innerHTML = day;
-    cell3.innerHTML = "<button>delete</button>";
+    cell3.innerHTML = "<button id ='" + String(numRows) +"'>delete</button>";
 
     totalSpendingWeekly += Number(amount);
     total.innerHTML = totalSpendingWeekly;
@@ -41,5 +40,32 @@ function updateWeekly(){
     
     if((weeklyBudget - totalSpendingWeekly) < 0){
         alert("Warning: You've exceeded your budget.");
-    }
+    } 
+
+    
+    //$().onclick = delClick;
 }
+/*
+function delClick(){
+    new AjaxRequest("weekly.html",
+        {
+        onSuccess: delButton,
+        onFailure: ajaxFailure,
+        onException: ajaxException
+        }
+    );
+}
+
+function delButton(){
+    var cell = this.parentNode;
+    var row = cell.parentNode;
+    row.remove();
+}
+
+function ajaxFailure(){
+    alert("An error was encountered");
+}
+
+function ajaxException(){
+    alert("An exception was encountered");
+}*/
