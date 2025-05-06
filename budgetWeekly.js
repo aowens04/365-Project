@@ -6,6 +6,7 @@ function pageload(){
     $("setWeekly").onclick = createWeekly;
     $("addWeekly").onclick = updateWeekly;
     $('delete').onclick = delButton; 
+    document.getElementsByName('delete').onclick = deleteRow;
 }
 
 function createWeekly(){
@@ -32,7 +33,11 @@ function updateWeekly(){
     cell0.innerHTML = category;
     cell1.innerHTML = amount;
     cell2.innerHTML = day;
-    cell3.innerHTML = "<button id ='" + String(numRows) +"'>delete</button>";
+    var checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.name = 'delete';
+    checkbox.onclick = deleteRow;
+    cell3.appendChild(checkbox);
 
     totalSpendingWeekly += Number(amount);
     total.innerHTML = totalSpendingWeekly;
@@ -41,31 +46,17 @@ function updateWeekly(){
     if((weeklyBudget - totalSpendingWeekly) < 0){
         alert("Warning: You've exceeded your budget.");
     } 
-
-    
-    //$().onclick = delClick;
 }
-/*
-function delClick(){
-    new AjaxRequest("weekly.html",
-        {
-        onSuccess: delButton,
-        onFailure: ajaxFailure,
-        onException: ajaxException
+
+function deleteRow(){
+    //inputs = document.getElementsByTagName("input");
+    inputs = document.getElementsByName('delete');
+    for (i = 0; i < inputs.length; i++){
+        input = inputs[i];
+        if(input.checked){
+            var cell = input.parentNode;
+            var row = cell.parentNode;
+            row.remove();
         }
-    );
+    }  
 }
-
-function delButton(){
-    var cell = this.parentNode;
-    var row = cell.parentNode;
-    row.remove();
-}
-
-function ajaxFailure(){
-    alert("An error was encountered");
-}
-
-function ajaxException(){
-    alert("An exception was encountered");
-}*/
