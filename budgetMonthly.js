@@ -4,7 +4,6 @@ var totalSpendingMonthly = Number(0);
 function pageload(){
     $("setMonthly").onclick = createMonthly;
     $("addMonthly").onclick = updateMonthly;
-    //$("delete").onclick = delButton; 
 }
 
 function createMonthly(){
@@ -37,24 +36,33 @@ function updateMonthly(){
     checkbox.onclick = deleteRow;
     cell3.appendChild(checkbox);
 
-    totalSpendingWeekly += Number(amount);
-    total.innerHTML = totalSpendingWeekly;
-    remainingWeekly.innerHTML = weeklyBudget - totalSpendingWeekly;
+    totalSpendingMonthly += Number(amount);
+    total.innerHTML = totalSpendingMonthly;
+    remainingMonthly.innerHTML = monthlyBudget - totalSpendingMonthly;
     
-    if((weeklyBudget - totalSpendingWeekly) < 0){
+    if((monthlyBudget - totalSpendingMonthly) < 0){
         alert("Warning: You've exceeded your budget.");
     } 
 }
 
 function deleteRow(){
-    //inputs = document.getElementsByTagName("input");
     inputs = document.getElementsByName('delete');
     for (i = 0; i < inputs.length; i++){
         input = inputs[i];
         if(input.checked){
             var cell = input.parentNode;
             var row = cell.parentNode;
+            cell1 = row.childNodes[1];
+            amount = cell1.childNodes[0].textContent;
             row.remove();
+
+            var monthlyBudget = $("inputMonthly").value;
+            var remainingMonthly = $("remainingMonthly");
+            var total = $("totalMonthly");
+            
+            totalSpendingMonthly -= Number(amount);
+            total.innerHTML = totalSpendingMonthly;
+            remainingMonthly.innerHTML = monthlyBudget - totalSpendingMonthly;
         }
     }  
 }
