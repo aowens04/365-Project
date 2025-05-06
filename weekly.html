@@ -32,9 +32,10 @@
             <label for="selCategory">Category:</label>
             <select id="selCategory">
                 <option value="Food & Beverage"> Food and Beverage</option>
-                <option value="Rent">Rent</option>
+                <option value="Groceries">Groceries</option>
                 <option value="Transportation">Transportation</option>
-                <option value="Vacation">Vacation</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Other">Other</option>
             </select>
             <label for="input">Amount: <input type="number" id="amount"></label>
 
@@ -76,6 +77,8 @@
                 </tfoot>
             </table>
         </div>
+        <form action="budget.php" method="post">
         <button id = "saveWeekly">Save</button>
+        </form> 
     </body>
 </html>
