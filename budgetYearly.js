@@ -18,7 +18,7 @@ function updateYearly(){
     var remainingYearly = $("remainingYearly");
     var category = $("selCategory").value;
     var amount = $("amount").value;
-    var date = $("date").value;
+    var date = $("year").value;
     var total = $("totalYearly");
 
     var table = $("tableYear");
