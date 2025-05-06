@@ -5,8 +5,6 @@ var numRows = 0;
 function pageload(){
     $("setWeekly").onclick = createWeekly;
     $("addWeekly").onclick = updateWeekly;
-    $('delete').onclick = delButton; 
-    document.getElementsByName('delete').onclick = deleteRow;
 }
 
 function createWeekly(){
@@ -53,19 +51,27 @@ function updateWeekly(){
         <input type="hidden" name="amount[]" value="${amount}">
         <input type="hidden" name="day[]" value="${day}">
     `);
-            
-    //$().onclick = delClick;
 }
 
 function deleteRow(){
-    //inputs = document.getElementsByTagName("input");
     inputs = document.getElementsByName('delete');
     for (i = 0; i < inputs.length; i++){
         input = inputs[i];
         if(input.checked){
             var cell = input.parentNode;
             var row = cell.parentNode;
+            cell1 = row.childNodes[1];
+            amount = cell1.childNodes[0].textContent;
             row.remove();
         }
     }  
+
+    var weeklyBudget = $("input").value;
+    var remainingWeekly = $("remainingWeekly");
+    var total = $("total");
+
+    totalSpendingWeekly += Number(amount);
+    total.innerHTML = totalSpendingWeekly;
+    remainingWeekly.innerHTML = weeklyBudget - totalSpendingWeekly;
+
 }
