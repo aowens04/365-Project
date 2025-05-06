@@ -42,7 +42,13 @@ function updateWeekly(){
         alert("Warning: You've exceeded your budget.");
     } 
 
-    
+    var hiddenInputs = $("hiddenInputs");
+    hiddenInputs.insertAdjacentHTML("beforeend", `
+        <input type="hidden" name="category[]" value="${category}">
+        <input type="hidden" name="amount[]" value="${amount}">
+        <input type="hidden" name="day[]" value="${day}">
+    `);
+            
     //$().onclick = delClick;
 }
 /*

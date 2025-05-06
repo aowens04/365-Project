@@ -28,6 +28,7 @@
         </div><br>
 
         <h2>Expenses List</h2>
+        <form id="saveForm" action="weeklyBudget.php" method="post">
         <div class="container">
             <label for="selCategory">Category:</label>
             <select id="selCategory">
@@ -51,7 +52,7 @@
                 </select>
             </label>
 
-            <button id="addWeekly">Add</button>
+            <button type="button" id="addWeekly">Add</button>
         </div>
         <hr>
         <div class="listContainer">
@@ -77,8 +78,8 @@
                 </tfoot>
             </table>
         </div>
-        <form action="budget.php" method="post">
-        <button id = "saveWeekly">Save</button>
+       <div id="hiddenInputs"></div>
+        <input type="submit" id = "saveWeekly" value="Save"></form>
         </form> 
     </body>
 </html>

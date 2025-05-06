@@ -33,6 +33,7 @@ function updateMonthly(){
     cell2.innerHTML = month;
     cell3.innerHTML = "<button>delete</button>";
 
+
     totalSpendingMonthly += Number(amount);
     total.innerHTML = totalSpendingMonthly;
     remainingMonthly.innerHTML = monthlyBudget - totalSpendingMonthly;
@@ -40,4 +41,12 @@ function updateMonthly(){
     if((monthlyBudget - totalSpendingMonthly) < 0){
         alert("Warning: You've exceeded your budget.");
     }
+
+    var hiddenInputs = document.getElementById("hiddenInputs");
+    hiddenInputs.insertAdjacentHTML("beforeend", `
+        <input type="hidden" name="category[]" value="${category}">
+        <input type="hidden" name="amount[]" value="${amount}">
+        <input type="hidden" name="date[]" value="${month}">
+    `);
+
 }
